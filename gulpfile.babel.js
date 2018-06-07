@@ -59,6 +59,8 @@ gulp.task('process', (callback) => {
         callback
     );
 });
-gulp.task('default', ['browser-sync'], () => {
-    gulp.watch('./src/**/*', ['process']);
+gulp.task('default', ['browser-sync','process'], () => {
+    gulp.watch('./src/**/*.js', ['webpack']);
+    gulp.watch('./src/**/*.pug', ['pug']);
+    gulp.watch('./src/**/*.sylus', ['stylus']);
 })
