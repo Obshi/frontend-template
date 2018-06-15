@@ -62,5 +62,5 @@ gulp.task('process', (callback) => {
 gulp.task('default', ['browser-sync','process'], () => {
     gulp.watch('./src/**/*.js', ['webpack']);
     gulp.watch('./src/**/*.pug', ['pug']);
-    gulp.watch('./src/**/*.sylus', ['stylus']);
+    gulp.watch('./src/**/*.styl', ['stylus']);
 })
